@@ -1,0 +1,11 @@
+mixin loginForm()
+  form.form(action="/login" method="POST")
+    div.row
+        label(for="email") Email Address
+        input(type="email" name="email")
+    
+    div.row
+        label(for="password") Password
+        textarea(cols="30", rows="5" name="content" type="text" value="Post content")
+        
+    input.button(type="submit" value="Log In →")

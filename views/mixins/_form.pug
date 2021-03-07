@@ -1,0 +1,28 @@
+mixin form
+    form.form(action="/create" method="POST")
+        div.row
+            label(for="title") Title
+            input(name="title" type="text" value="Post title")
+        div.row
+            label(for="content") Content
+            textarea(cols="30", rows="10" name="content" type="text" value="Post content") Post content
+        button(type="submit") SAVE
+
+    script.
+        console.log('create post form');
+        //- document.querySelector('.form').addEventListener('submit', (e) => {
+        //-     e.preventDefault()
+        //-     const [title, content] = [e.target[0].value, e.target[1].value]
+
+        //-     fetch('/create', {
+        //-         method: 'POST',
+        //-         headers: {
+        //-         'Accept': 'application/json',
+        //-         'Content-Type': 'application/json'
+        //-         },
+        //-         body: JSON.stringify({title, content})
+        //-     }).then(res => res.json())
+        //-     .then(data => {
+        //-         console.log(data);
+        //-     })
+        //- })

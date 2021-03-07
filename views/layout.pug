@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='/dist/style.css')
+        title ka4andev
+    body
+        header.header
+            ul.menu
+                li 
+                    a(href="/") Main
+                li 
+                    a(href="/profile") Profile
+                li 
+                    a(href="/blog") Blog
+                li 
+                    a(href="/login") Login
+        .content
+            block main
+
+        block scripts
+            script(src="/dist/App.bundle.js")

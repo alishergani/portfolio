@@ -1,0 +1,12 @@
+extends layout
+
+block main
+    h1 Blog page 
+        a(href="/create")
+            button.btn Create post
+
+    ul.post-list
+        each post in posts
+            a.post(href=`/blog/${post.slug}`)
+                li
+                    h3.title #{post.title}
