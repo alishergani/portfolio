@@ -7,18 +7,27 @@ html(lang="en")
         link(rel='stylesheet', href='/dist/style.css')
         title ka4andev
     body
+        //- pre= h.dump(user)
         header.header
             ul.menu
-                li 
-                    a(href="/") Main
-                li 
-                    a(href="/profile") Profile
-                li 
-                    a(href="/blog") Blog
-                li 
-                    a(href="/login") Login
+                a(href="/") 
+                    li.menu-item(data-label="") Main 
+                a(href="/blog") 
+                    li.menu-item(data-label="blog") Blog 
+                if user
+                    a(href="/profile") 
+                        li.menu-item(data-label="profile") #{user.name}
+                else
+                    a(href="/login") 
+                        li.menu-item(data-label="login") Login
+        block messages
+            if success_msg
+                p #{success_msg}
         .content
             block main
+        //- if user
+        //-     .username #{user.name}
+
 
         block scripts
             script(src="/dist/App.bundle.js")

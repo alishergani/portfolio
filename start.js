@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-let url = "mongodb+srv://ka4an:parolotdb@cluster0.ehbnp.mongodb.net/ka4andev"
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.LOCAL_DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = global.Promise
 
 mongoose.connection.on('error', (err) => {
@@ -11,10 +11,10 @@ mongoose.connection.on('error', (err) => {
 
 
 require('./models/Post');
+require('./models/User');
 
 
 const app = require('./app')
-require('dotenv').config()
 
 
 app.listen(process.env.PORT, () => {

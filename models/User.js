@@ -3,22 +3,20 @@ mongoose.Promise = global.Promise
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    email: {
-      type: String,
-      unique: true,
-      lowercase: true,
-      trim: true,
-      validate: [validator.isEmail, 'Invalid Email Address'],
-      required: 'Please Supply an email address'
-    },
-    name: {
-      type: String,
-      required: 'Please supply a name',
-      trim: true
-    },
-    resetPasswordToken: String,
-    resetPasswordExpires: Date,
-});
-
-
+  email: {
+    type: String,
+    trim: true,
+    required: 'Write your email!'
+  },
+  name: {
+    type: String,
+    required: 'Write your name!',
+    trim: true
+  },
+  password: {
+    type: String,
+    required: 'Set some password!',
+    trim: true
+  }
+})
 module.exports = mongoose.model('User', userSchema);

@@ -81,6 +81,14 @@
 
 __webpack_require__(0);
 
+// console.log(location.pathname);
+
+document.querySelectorAll('.menu-item').forEach(function (item) {
+    if (location.pathname == "/" + item.dataset.label) {
+        item.classList.add('active');
+    }
+});
+
 /***/ })
 /******/ ]);
 //# sourceMappingURL=App.bundle.js.map

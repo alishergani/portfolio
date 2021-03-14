@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 // const User = mongoose.model('User')
 
-exports.loginForm = (req, res) => {
+exports.loginPage = (req, res) => {
     res.render('login');
 };
 

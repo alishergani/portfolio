@@ -1,6 +1,8 @@
 extends layout
 
 block main
-    h1.heading #{title}
+    h1.heading 
+        a.lnk(href="/blog") Blog
+        | |#{title}
 
     p #{post.content}

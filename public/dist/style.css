@@ -26,10 +26,22 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+  padding: 10px 20px; }
   header .menu {
     display: -ms-flexbox;
     display: flex; }
+    header .menu .menu-item {
+      cursor: pointer;
+      border: 2px solid #000; }
+      header .menu .menu-item:hover {
+        background: #000;
+        color: #fff;
+        font-weight: bold; }
+      header .menu .menu-item.active {
+        background: #000;
+        color: #fff;
+        font-weight: bold; }
     header .menu li {
       border: 1px solid #000;
       list-style: none;
@@ -38,20 +50,38 @@ header {
 
 .content {
   padding: 20px 10%; }
+  .content .inner {
+    margin-bottom: 30px; }
 
 button {
   cursor: pointer; }
-  button.btn {
-    border: 1px solid #000;
-    margin: 5px;
-    padding: 5px; }
-    button.btn:hover {
-      opacity: .7; }
+
+.btn {
+  background: transparent;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  margin-right: 15px;
+  padding: 5px;
+  font-weight: bold; }
+  .btn:hover {
+    opacity: .7;
+    color: #fff;
+    background: #000; }
 
 .heading {
   margin-bottom: 20px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #444; }
+  border-bottom: 1px solid #444;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.lnk {
+  opacity: 0.3; }
+  .lnk:hover {
+    opacity: 1;
+    text-decoration: underline; }
 
 .post-list {
   margin-top: 30px;

@@ -1,0 +1,17 @@
+mixin regForm()
+  h4.heading Registration form
+  form.form(action="/register" method="POST")
+
+    div.row
+        label(for="username") Username
+        input(type="text" name="username" value="ka4anbek")
+
+    div.row
+        label(for="email") Email Address
+        input(type="email" name="email" value="devka4an@gmail.com")
+    
+    div.row
+        label(for="password") Password
+        input(name="password" type="password" value="qweqwe")
+        
+    input.button(type="submit" value="Log In →")

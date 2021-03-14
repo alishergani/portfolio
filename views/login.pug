@@ -1,8 +1,20 @@
-extends layout
-
-include mixins/_loginForm
+extends empty
 
 block main
-    h1.heading Login page
-    .inner
-        +loginForm
+    h4.heading login form
+    form.form(action="/login" method="POST")
+        div.row
+            label(for="email") Email Address
+            input(type="email" name="email" value="devka4an@gmail.com")
+
+        div.row
+            label(for="password") Password
+            input(name="password" type="password" value="qweqwe")
+            
+        input.btn(type="submit" value="Log In →")
+
+    a(href="/register")
+        button.btn Registration
+
+        script.
+            console.log("AUTH FORM")

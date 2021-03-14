@@ -5,7 +5,7 @@ exports.blogPage = async(req, res) => {
     const postPromise = Post
         .find()
     const posts = await postPromise
-    res.render('blog', {posts})
+    res.render('blog', {posts, user: req.user})
 }
 
 exports.getPosts = async(req, res) => {
